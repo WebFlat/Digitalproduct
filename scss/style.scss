@@ -118,6 +118,13 @@ body {
         &--team {
             color: $gray-color;
         }
+        &--loc {
+           margin: 20px 0 0 0; 
+        }
+    }
+    &--location {
+        position: absolute;
+        @include my_pos($top: 15%);
     }
 }
 
@@ -529,3 +536,101 @@ body {
     }
 
 }
+
+
+
+
+
+//Map**************************************************
+.location {
+    background-color: $primary-color;
+    position: relative;
+
+}
+.map {
+    height: 900px;
+    width: 100%;
+    opacity: .5;
+    padding-bottom: 55px;
+ }
+ .form {
+    width: 860px;
+    max-width: 70%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    &__input {
+        position: relative;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        width: 45%;
+        background-color: rgba(235,235,235, .5);
+        padding: 20px 25px;
+        &::placeholder {
+            color: $light-color;
+            font-weight: 400;
+            font-style: italic;
+            font-family: 'PT Sans', sans-serif;
+        }
+        &--name {
+        }
+        &--email {
+        }
+    }
+    &__text {
+        position: relative;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        background-color: rgba(235,235,235, .5);
+        padding: 25px;
+        margin-top: 25px;
+    }
+    &__star {
+        position: absolute;
+         top: 5%;
+        &--email {
+            right: 31%;
+           
+        }
+        &--name {
+            left: 13%;
+        }
+        &--text {
+            left: 17%;
+            top: 38%;
+        }
+    }
+    &__btn {
+        margin: 55px auto 0 auto;
+        cursor: pointer;
+        background-color: $bg-color;
+        border: none;
+        border-bottom: 4px solid #8783b0;
+        border-radius: 5px;
+        padding: 25px 5px 21px 5px;
+        width: 295px;
+        text-transform: uppercase;
+        color: $light-color;
+        font-weight: bold;
+        @include tr;
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: 0px 2px 61px -10px rgba(33,29,33,1);
+            border-color: $light-color;
+            color: $gray-color;
+        }
+    }
+
+
+
+ }

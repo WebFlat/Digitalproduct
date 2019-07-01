@@ -309,6 +309,25 @@
                 </div>
             </div>
         </section>
+        <section class="location" id="location">
+            <div class="map" id="map">
+            </div> 
+             <div class="header-section header-section--location">
+                <svg class="icon works__icon">
+                    <use xlink:href="#Icon-location"></use>
+                </svg>
+                <h2 class="header-section__title header-section__title--loc">Get in Touch</h2>
+            </div>
+           <form action="POST" class="form">
+               <input class="form__input form__input--name type="text" placeholder="Your Name" required>
+               <span class="form__star form__star--name">&#42;</span>
+               <input class="form__input form__input--email type="email" placeholder="Your Email" required>
+                <span class="form__star form__star--email">&#42;</span>
+               <textarea class="form__text" name="message" cols="30" rows="7" placeholder="Your Message"></textarea>
+                <span class="form__star form__star--text">&#42;</span>
+                <button type="submit" class="form__btn">Send message</button>
+           </form>
+        </section> 
     </main>
     <footer>
 
@@ -369,7 +388,7 @@
   <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 60" id="Icon-Works">
     <image width="40" height="60" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAA8CAQAAAC+sDBrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBhgVLSxO9h7LAAACaUlEQVRYw6WYXbHjMAxGNUVgCIFQCGFwC8EQymDDoBC6i+DOIsgsgkAIhMwiOPvQJP6TFSebvLS2fCz7k2S3gqzvxPVn2ilyk+3p5Prjos872wMLXZir8Z0BH77HXSPwfRLngTluiTvvAPT/418KFF75fGf9y4GOBRiu+5cDz0njtfWUZu3SKP5pwFZpvL7fmumrOUN8OfqmxP3f5gzRsquYo2MBHk1LVuQrDb+BsUkUVb7cqAfg3gTsoFyLFgqv5sAegBlXBw7AkhqYr2POM6uUwzfjBOEBEEtzTY5cmlEDnpHDkOZYDseTEYCR57E0R3Lcs8NrUiWLnLHlcEzAgsfh8CwVZLRdthx5nH0KsLbwnWDLMRV++/QULkNuG6ZnB5At0AFUpVlwwtPIDm1wDbhK8wnMp2HySFpqSxbWrLnJHxH5qhTQXyLyii4aTn6IyO+K9ZeI/Nx2pVfndGugPFYP5rK6ZBnTC8LbyOE7SxLYSzU5V0pgdxVDx8AMwMxQLW37OgP9XTE90jYEzR7YRz4eAz973QfgJ3jel4FDOPS3pl7Jilagi0tLaB7Ne5cFfMaXktDcmweUBUwuTXnHcBqYXZryruU0cE5rgeF8E9DnG2W63wA0D3pBqke9DlSENEK0AaiEmh6kfRNQTYZy1j3ND4FqupZAveCWwLteUDTltIJbAislTwNqxSwHVgueBtRmz4HVkqwDy/lTYFc/2HRgqWAKNI61GjCPsRhYi1UTmGdBDBwwrs51YJqnAWj6ZwHTShKAtWxvAMYFdwO6o58eFjAuuBvQc/CvhA30aI+/DtT+wJrsEf8AVQ6UhE4ObNgAAAAASUVORK5CYII="></image>
   </symbol>
-  <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 60" id="location">
+  <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 60" id="Icon-location">
     <image width="42" height="60" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA8CAQAAAC6ReBWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBhgVLxBTrwDOAAAC20lEQVRYw7WY3ZWbMBBGP7sCSiAVhA5CB0sHoYN1Ce6AEtgOOKmA7cBOBd4OcAc3DxJrfmZkbJ9IT0ajKzTzzUh4h5KtUKmfypWpkHTWVV/6q0+dk7Pwek7DgNcuNOTeXA/YxckDHQdKSoQoKTnQfS/W2mALeYxTOip3H9X3ssf70JwTAL2/uYltD8BpaTs3KxiAIfGG6zcOMwoPGpCnDe+43tsMu0ZmDyGFyJbY+cAzSGP2+LgBhieRwQkD0EyhBcAD4bFDBgQXhAc90L2EFKID+hFaAiRiXtJERfY0MbdsF8R3FaIFWtewX+W9nxiRJMQw+mLVx2RoqcjJqWhjRfDsYUDBwZcEcpkMhtgn/QKUoXw0pkHvKDeosncdcAxTa0cinnKDKq2Q1UC/Vybpy6jeb5I+dDUr+5c+JP02R6RMAK53bL+NMrQjAexA0s48Z+zn98aR9voPba+rpNwYuUoq3HlFtFi2XNJ1r7MD/ZRUutAqWliLnQP0zRj+I+ldmYnM9B4tlu2XpHPQ48mNv10TWjf2J6ASmVujyni2zxMgi/lvST/UKY118GiuW8fbSB0Xzam5gJODIeW7AK3dzYgyQuZXHq+mXsL5EX4MicMko57U1J7aPclCtdAIPbpV55Hej26cOrh4CVncAj4VSfsSdEKYiyF/Gjmbb6702ntOoa/4tZjvc7nacxro57tc+6V8GLm6jMyHG7e4pPppeR7PhzMGN6+9Xq9P3aXJ8cErZXiNw/zp2uziXi6s3ljFyHP7NmkVdmgt026ztJx7rWWaW34y+gEYrNS2zbeEK/OXTmkvfWHvfE2nQ1C5yCoVzntisV0Qtn705qZ85iu2TSyYhI6KLTc/3wS1XZBNv+2egQYXzFXQpbd+Hzpu9aaCaksS34POE+FO1LdDNfnA6bcV8S3QIibkIfFR9jA0lI7QDlvst0EV/zDa+Pm+u/O33O1CfpH0w/lYW7R/tCICVSHGLJMAAAAASUVORK5CYII="></image>
   </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.531 72" id="Logo">
@@ -382,7 +401,8 @@
 </svg>
     <script src="js/jquery.js"></script>
     <script src="js/slick.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDXUTMWWK4qZwIsU3AudvJ9UC48L9IdA8&callback=initMap">
+    </script>
     <script src="js/script.js"></script>
 </body>
-
 </html>
