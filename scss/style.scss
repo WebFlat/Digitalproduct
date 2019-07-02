@@ -46,8 +46,8 @@ $bg-color: #9f9acf;
 $header-color: #fefefb;
 $gray-color: #665f60;
 $light-color: #fefcfd;
-$primary-color: #9f9acf;
 $body-color: #ebebeb;
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -83,6 +83,12 @@ body {
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
+    &--footer {
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .btn {
@@ -106,7 +112,8 @@ body {
 }
 
 .header-section {
-    font-family: 'PT Sans', sans-serif;
+    font-family: ProximaNova;
+    font-weight: 700;
     font-size: 2.4rem;
     text-align: center;
     margin: 0 auto;
@@ -472,11 +479,13 @@ body {
     }
     &__item {
         padding-top: 165px;
+        padding-right: 15px;
+        padding-left: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 355px;
+        width: 100%;
         background-color: #fff;
         position: relative;
     }
@@ -490,21 +499,31 @@ body {
         top: -40%;
     }
     &__skills {
+        font-family: 'PT Sans', sans-serif;
         margin: 35px 50px;
+        font-size: 2.4rem;
+        font-style: italic;
     }
     &__name {
+        font-weight: bold;
         text-transform: uppercase;
         margin: 0;
         color: #9f9acf;
+        font-size: 2.4rem;
     }
     &__wrap-social {
         padding: 20px 15%;
         width: 100%;
         display: flex;
         justify-content: space-around;
-        background-color: #9f9acf;
+        background-color: $bg-color;
         &--short {
              padding: 20px 23%;
+        }
+        &--footer {
+            width: 260px;
+            padding: 0;
+            align-items: center;
         }
     }
     &__socialLink {
@@ -521,7 +540,7 @@ body {
         &:active,
         &:focus {
             transform: scale(1.2);
-            background-color: #9f9acf;
+            background-color:  $bg-color;
             border-color: $body-color;
         }
         &:hover .fab,
@@ -530,7 +549,7 @@ body {
             color: $body-color;
         }
         .fab {
-            color: #9f9acf;
+            color:  $bg-color;
             @include tr;
         }
     }
@@ -543,9 +562,21 @@ body {
 
 //Map**************************************************
 .location {
-    background-color: $primary-color;
+    background-color: $bg-color;
     position: relative;
-
+    &__btn {
+        width: 85px;
+        height: 85px;
+        position: absolute;
+        background: rgba(159,154,207, .5) url(../img/arrow-top.svg) no-repeat center;
+        left: 85%;
+        bottom: 9%;
+        @include tr;
+        &:hover,
+        &:active {
+            background-color: rgba(159,154,207, .9)
+        }   
+    } 
 }
 .map {
     height: 900px;
@@ -573,17 +604,20 @@ body {
         width: 45%;
         background-color: rgba(235,235,235, .5);
         padding: 20px 25px;
-        &::placeholder {
-            color: $light-color;
-            font-weight: 400;
-            font-style: italic;
-            font-family: 'PT Sans', sans-serif;
+        // &::placeholder {
+        //     color: $light-color;
+        //     font-weight: 400;
+        //     font-style: italic;
+        //     font-family: 'PT Sans', sans-serif;
+        // }
+        &:hover {
+           background-color: rgba(235,235,235, .8); 
         }
-        &--name {
+        &:active +.form__star,
+        &:focus +.form__star {
+            display: none;
         }
-        &--email {
-        }
-    }
+    }    
     &__text {
         position: relative;
         outline: none;
@@ -593,20 +627,31 @@ body {
         background-color: rgba(235,235,235, .5);
         padding: 25px;
         margin-top: 25px;
+        &:hover {
+           background-color: rgba(235,235,235, .8); 
+        }
+        &:active +.form__star,
+        &:focus +.form__star {
+            display: none;
+        }
     }
     &__star {
         position: absolute;
-         top: 5%;
+        top: 4%;
+        color: $light-color;
+        font-weight: 400;
+        font-style: italic;
+        font-family: 'PT Sans', sans-serif;
+        @include tr;
         &--email {
-            right: 31%;
-           
+            right: 30%;
         }
         &--name {
-            left: 13%;
+            left: 4%;
         }
         &--text {
-            left: 17%;
-            top: 38%;
+            left: 4%;
+            top: 27%;
         }
     }
     &__btn {
@@ -625,12 +670,26 @@ body {
         &:hover,
         &:active,
         &:focus {
-            box-shadow: 0px 2px 61px -10px rgba(33,29,33,1);
-            border-color: $light-color;
+            box-shadow: 0px 2px 41px -10px rgba(33,29,33,1);
             color: $gray-color;
         }
     }
+}
 
 
 
+
+
+//Footer**********************************************
+ .footer {
+    padding: 75px 30px;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    &__copyright {
+        font-family: 'PT Sans', sans-serif;
+        color: $light-color;
+    }
  }

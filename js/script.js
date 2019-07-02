@@ -21,7 +21,7 @@ $(document).ready(function() {
       autoplaySpeed: 6000,
       responsive: [
       {
-        breakpoint: 1300,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
         }
@@ -32,19 +32,27 @@ $(document).ready(function() {
 
 function initMap() {
   let geo = {
+    lat: -7.963919,
+    lng: 112.589311
+  }
+  let markerPosition = {
     lat: -7.9307512,
     lng: 112.6355576
   }
+
   let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
     center: geo,
-     
   });
 
+  
+
+
   let marker = new google.maps.Marker({
-    position: geo,
+    position: markerPosition,
     map: map,
     icon: './img/pin.png',
     title: 'Ikan Piranha Atas 220C  Malang - East Java Indonesia'
   });
+
 }

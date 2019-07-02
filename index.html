@@ -319,17 +319,38 @@
                 <h2 class="header-section__title header-section__title--loc">Get in Touch</h2>
             </div>
            <form action="POST" class="form">
-               <input class="form__input form__input--name type="text" placeholder="Your Name" required>
-               <span class="form__star form__star--name">&#42;</span>
-               <input class="form__input form__input--email type="email" placeholder="Your Email" required>
-                <span class="form__star form__star--email">&#42;</span>
-               <textarea class="form__text" name="message" cols="30" rows="7" placeholder="Your Message"></textarea>
-                <span class="form__star form__star--text">&#42;</span>
+               <input class="form__input form__input--name type="text"  required>
+               <label class="form__star form__star--name">Your Name <span style="color: #000">&#42;</span></label>
+               <input class="form__input form__input--email type="email" required>
+                <label class="form__star form__star--email">Your Email <span style="color: #000">&#42;</span></label>
+               <textarea class="form__text" name="message" cols="30" rows="7"></textarea>
+                <label class="form__star form__star--text">Your Message <span style="color: #000">&#42;</span></label>
                 <button type="submit" class="form__btn">Send message</button>
            </form>
+        <a href="#" class="location__btn"></a>
         </section> 
     </main>
-    <footer>
+    <footer id="footer" class="footer">
+        <div class="container container--footer">
+            <p class="footer__copyright">2014 <span style="font-weight: bold">tulus</span>driyo. All Right Reserved.</p>
+            <div class="team__wrap-social team__wrap-social--footer">
+                <a href="#" class="team__socialLink">
+                    <i class="fab fa-behance"></i>
+                </a>
+                <a href="#" class="team__socialLink">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="team__socialLink">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+                 <a href="#" class="team__socialLink">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                 <a href="#" class="team__socialLink">
+                    <i class="fab fa-twitter"></i>
+                </a>
+             </div>
+        </div>
 
     </footer>
 
