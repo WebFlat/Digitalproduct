@@ -68,6 +68,89 @@ body {
     color: #333;
 }
 
+//Burger menu
+.burger {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 43%;
+    @include tr;
+    &:hover .burger__main,
+    &:active .burger__main,
+    &:focus .burger__main {
+        display: flex;
+    }
+    &:hover .burger__line,
+    &:active .burger__line,
+    &:focus .burger__line  {
+       background-color: $gray-color; 
+    }
+    // &:hover .burger__line--first,
+    // &:active .burger__line--first,
+    // &:focus .burger__line--first,
+    // &:hover .burger__line--fourth,
+    // &:active .burger__line--fourth,
+    // &:focus .burger__line--fourth {
+    //     display: none;
+    // }
+    // &:hover .burger__line--second,
+    // &:active .burger__line--second,
+    // &:focus .burger__line--second {
+    //     transform: rotate(45deg);
+    // }
+    // &:hover .burger__line--third,
+    // &:active .burger__line--third,
+    // &:focus .burger__line--third {
+    //     transform: rotate(-45deg);
+    // }
+
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        text-align: center;
+        display: none;
+    }
+    &__link {
+        @include tr;
+        font-family: ProximaNova;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 2px;
+        text-decoration: none;
+        color: $light-color;
+        background-color: $bg-color;
+        border-bottom: 1px solid $light-color;
+        &:last-of-type {
+            border-bottom: none;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: -1px -1px 34px 4px rgba(0,0,0,0.75);
+            background-color: $gray-color;
+        } 
+    }
+    &__line {
+        @include tr;
+        width: 35px;
+        height: 3px;
+        background-color: $light-color;
+        margin-bottom: 5px;
+    }
+    &__pic {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        align-items: flex-end;
+    }
+
+} 
+
+
+
+
 //Helpers*********************************
 .container {
     max-width: 1170px;
@@ -82,6 +165,11 @@ body {
         grid-template-rows: 1fr 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+
+        @media screen and (max-width: 568px) {
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+        }
     }
     &--footer {
         padding: 0 30px;
@@ -106,6 +194,7 @@ body {
     &:hover,
     &:focus,
     &:active {
+        box-shadow: 0px 2px 41px -10px rgba(33,29,33,1);
         background-color: #7d7a7c;
         color: $light-color;
     }
@@ -145,7 +234,7 @@ body {
 }
 
 .item {
-    padding: 145px 0 0 0;
+    padding: 145px 15px 0 15px;
     outline: none;
 
 }
@@ -338,7 +427,6 @@ body {
         width: 30%;
         min-width: 235px;
         height: 555px;
-        // background: url(../img/about-bg.jpg) no-repeat 20%;
         background-size: cover;
         overflow: hidden;
         text-align: center;
@@ -460,6 +548,7 @@ body {
         &:active,
         &:focus {
             background-color: $gray-color;
+            box-shadow: 0px 2px 41px -10px #211d21;
         }
     }
 }
@@ -479,8 +568,6 @@ body {
     }
     &__item {
         padding-top: 165px;
-        padding-right: 15px;
-        padding-left: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -527,7 +614,7 @@ body {
         }
     }
     &__socialLink {
-        padding-top: 1%;
+        padding-top: 2px;
         text-decoration: none;
         width: 32px;
         height: 32px;
@@ -564,6 +651,7 @@ body {
 .location {
     background-color: $bg-color;
     position: relative;
+    overflow: hidden;
     &__btn {
         width: 85px;
         height: 85px;
@@ -574,9 +662,59 @@ body {
         @include tr;
         &:hover,
         &:active {
-            background-color: rgba(159,154,207, .9)
+            background-color: rgba(159,154,207, .9);
         }   
     } 
+    &__address,
+    &__tel {
+        font-family: 'PT Sans', sans-serif;
+        width: 350px;
+        position: absolute; 
+        right: -245px;
+        display: flex;
+        justify-content: center;
+        transition: transform ease-in .5s;
+        cursor: pointer;
+        &:hover,
+        &:active,
+        &:focus {
+            transform: translateX(-245px);
+        }
+    }
+    &__address {
+        top: 15%;
+    }
+    &__tel {
+        top: 25%;
+        
+    }
+    &__icon {
+        width: 40px;
+        height: 40px;
+        
+    }
+    &__wrap-icon,
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $bg-color;
+        width: 30%;
+        height: 90px;
+        &--light {
+            background-color: #b0abe0;
+        }
+    }
+    &__text {
+        color: $gray-color;
+        text-align: center;
+        margin: 0;
+        height: 90px;
+        width: 70%;
+        line-height: 1;
+        align-self: center;
+        background-color: rgba(217,216,227, .7)
+    }
 }
 .map {
     height: 900px;
@@ -585,6 +723,7 @@ body {
     padding-bottom: 55px;
  }
  .form {
+    overflow: hidden;
     width: 860px;
     max-width: 70%;
     position: absolute;
@@ -595,8 +734,9 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 
-
-    &__input {
+    &__input,
+    &__text {
+        color: $gray-color;
         position: relative;
         outline: none;
         border: none;
@@ -604,36 +744,20 @@ body {
         width: 45%;
         background-color: rgba(235,235,235, .5);
         padding: 20px 25px;
-        // &::placeholder {
-        //     color: $light-color;
-        //     font-weight: 400;
-        //     font-style: italic;
-        //     font-family: 'PT Sans', sans-serif;
-        // }
+        @include tr;
+        transition: transform  ease-in .2s;
         &:hover {
            background-color: rgba(235,235,235, .8); 
         }
         &:active +.form__star,
         &:focus +.form__star {
-            display: none;
+            transform: translateX(600%);
         }
     }    
     &__text {
-        position: relative;
-        outline: none;
-        border-radius: 5px;
-        border: none;
         width: 100%;
-        background-color: rgba(235,235,235, .5);
         padding: 25px;
         margin-top: 25px;
-        &:hover {
-           background-color: rgba(235,235,235, .8); 
-        }
-        &:active +.form__star,
-        &:focus +.form__star {
-            display: none;
-        }
     }
     &__star {
         position: absolute;
@@ -644,7 +768,7 @@ body {
         font-family: 'PT Sans', sans-serif;
         @include tr;
         &--email {
-            right: 30%;
+            left: 60%;
         }
         &--name {
             left: 4%;
@@ -685,11 +809,14 @@ body {
     padding: 75px 30px;
     background-color: $bg-color;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     align-self: center;
     &__copyright {
-        font-family: 'PT Sans', sans-serif;
-        color: $light-color;
+         font-family: 'PT Sans', sans-serif;
+         color: $light-color;
     }
  }
+
+
+
+@import "_media";

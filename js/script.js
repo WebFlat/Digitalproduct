@@ -25,6 +25,12 @@ $(document).ready(function() {
         settings: {
           slidesToShow: 2,
         }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
       }
     ]
   });
@@ -36,8 +42,8 @@ function initMap() {
     lng: 112.589311
   }
   let markerPosition = {
-    lat: -7.9307512,
-    lng: 112.6355576
+    lat: -7.9407512,
+    lng: 112.6055576
   }
 
   let map = new google.maps.Map(document.getElementById('map'), {

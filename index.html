@@ -21,7 +21,7 @@
 
 <body>
     <header id="header" style="background: linear-gradient(rgba(159, 154, 207, .5),rgba(159, 154, 207, .5)), url(./img/header.jpg) no-repeat center;background-size: 100% 109%;">
-        <div class="container header">
+        <div class="container header"> 
             <section class="nav">
                 <div href="#" class="nav__logo-wrap">
                     <a href="" class="nav__logo-link">
@@ -32,10 +32,25 @@
                 </div>
                 <div class="logo__links">    
                     <a href="#" class="nav__link">Home</a>
-                    <a href="#" class="nav__link">About</a>
-                    <a href="#" class="nav__link">Services</a>
-                    <a href="#" class="nav__link">Works</a>
-                    <a href="#" class="nav__link">Contact</a>
+                    <a href="#about" class="nav__link">About</a>
+                    <a href="#service" class="nav__link">Services</a>
+                    <a href="#works" class="nav__link">Works</a>
+                    <a href="#location" class="nav__link">Contact</a>
+                </div>
+                <div class="burger">
+                    <div class="burger__pic">
+                        <div class="burger__line burger__line--first"></div>
+                        <div class="burger__line burger__line--second"></div>
+                        <div class="burger__line burger__line--third"></div>
+                        <div class="burger__line burger__line--fourth"></div>
+                    </div>   
+                <nav class="burger__main">
+                    <a href="#" class="burger__link">Home</a>
+                    <a href="#about" class="burger__link">About</a>
+                    <a href="#service" class="burger__link">Services</a>
+                    <a href="#works" class="burger__link">Works</a>
+                    <a href="#location" class="burger__link">Contack</a>
+                </nav>
                 </div>
             </section>
             <section class="header__block">
@@ -45,7 +60,7 @@
         </div>
     </header>
     <main>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container container--about">
                 <div class="about__pic" style="background: linear-gradient(rgba(159, 154, 207, .5),rgba(159, 154, 207, .5)), url(./img/about-bg.jpg) no-repeat 30%;">
                     <!-- <img src="./img/icon-about.svg" alt="" class="about__img"> -->
@@ -63,7 +78,7 @@
                 </div>
             </div>
         </section>
-        <section class="service">
+        <section class="service" id="service">
             <div class="container container--service">
                 <div class="service__item service__item--graf">
                     <svg class="icon icon__service">
@@ -105,7 +120,7 @@
             </div>
         </section>
         <section class="works" id="works" style="background: linear-gradient(rgba(182,178,215, .95),rgba(182,178,215, .95)), url(./img/works-bg.jpg) no-repeat center; background-size: cover">
-            <div class="container">
+            <div class="container container--works">
                 <div class="header-section">
                     <svg class="icon works__icon">
                         <use xlink:href="#Icon-Works"></use>
@@ -146,7 +161,7 @@
             </div>
         </section>
         <section class="team">
-            <div class="container">
+            <div class="container container--team">
                 <div class="header-section">
                     <svg class="icon works__icon">
                         <use xlink:href="#Icon-Team"></use>
@@ -328,11 +343,27 @@
                 <button type="submit" class="form__btn">Send message</button>
            </form>
         <a href="#" class="location__btn"></a>
+        <div class="location__address">
+            <div class="location__wrap-icon">
+                <svg class="icon location__icon">
+                    <use xlink:href="#Icon-Address"></use>
+                </svg>
+            </div>    
+            <p class="location__text">Ikan Piranha Atas 220C<br>Malang - East Java<br>Indonesia</p>
+        </div>
+        <div class="location__tel">
+            <div class="location__wrap-icon location__wrap-icon--light">
+                <svg class="icon location__icon">
+                    <use xlink:href="#phone"></use>
+                </svg>
+            </div>
+            <p class="location__text">Tel: +3845599933993</p>
+        </div>
         </section> 
     </main>
     <footer id="footer" class="footer">
         <div class="container container--footer">
-            <p class="footer__copyright">2014 <span style="font-weight: bold">tulus</span>driyo. All Right Reserved.</p>
+            <p class="footer__copyright">©2014 <span style="font-weight: bold">tulus</span>driyo. All Right Reserved.</p>
             <div class="team__wrap-social team__wrap-social--footer">
                 <a href="#" class="team__socialLink">
                     <i class="fab fa-behance"></i>
