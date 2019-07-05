@@ -1,6 +1,6 @@
 @media screen and (max-width: 1024px) {
 	.header .nav {
-		padding: 35px 0;
+		padding: 35px 5%;
 	}
 }
 @media screen and (max-width: 960px) {
@@ -12,14 +12,18 @@
 	}
 	.burger {
 		display: block;
+		right: 10%;
+	}
+	.header .nav {
+		padding: 35px 10%;
 	}
 }
 @media screen and (max-width: 768px) {
-	.burger {
-		right: 5%;
-	}
 	.header .nav {
-		padding: 35px 20px;
+		padding: 35px 15%;
+	}
+	.burger {
+		right: 15%;
 	}
 	.header__title {
 		font-size: 6rem;

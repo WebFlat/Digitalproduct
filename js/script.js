@@ -36,6 +36,9 @@ $(document).ready(function() {
   });
 });
 
+
+//MAp**********************************************************
+
 function initMap() {
   let geo = {
     lat: -7.963919,
@@ -51,14 +54,22 @@ function initMap() {
     center: geo,
   });
 
-  
-
-
   let marker = new google.maps.Marker({
     position: markerPosition,
     map: map,
     icon: './img/pin.png',
     title: 'Ikan Piranha Atas 220C  Malang - East Java Indonesia'
   });
+
+
+//Validate form******************************************************
+function validate() {
+  let label = document.getElementByClassName("form__star");
+  let nameInput = document.getElementById("name");
+  if (nameInput.value.length > 0) {
+      label.classList.add("hide");
+  }
+};
+
 
 }
