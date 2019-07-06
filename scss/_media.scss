@@ -4,6 +4,12 @@
 	}
 }
 @media screen and (max-width: 960px) {
+	.header .nav {
+		&__logo {
+			width: 60px;
+			height: 60px;
+		}
+	}
 	.container--service {
     	width: 100%;
 	}
@@ -13,6 +19,7 @@
 	.burger {
 		display: block;
 		right: 10%;
+		top: 35%;
 	}
 	.header .nav {
 		padding: 35px 10%;
@@ -20,13 +27,13 @@
 }
 @media screen and (max-width: 768px) {
 	.header .nav {
-		padding: 35px 15%;
+		padding: 10px 15%;
 	}
 	.burger {
 		right: 15%;
 	}
 	.header__title {
-		font-size: 6rem;
+		font-size: 5.5rem;
 	}
 	.header__subtitle {
 		font-size: 2rem;
@@ -106,6 +113,9 @@
 	}
 }
 @media screen and (max-width: 560px) {
+	.header__title {
+		font-size: 4rem;
+	}
 	.works {
 		padding: 70px 0;
 	}
@@ -138,5 +148,8 @@
 	}
 	.container--footer {
 		padding: 0;
+	}
+	.header__title {
+		font-size: 3rem;
 	}
 }

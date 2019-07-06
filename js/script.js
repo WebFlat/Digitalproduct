@@ -64,12 +64,24 @@ function initMap() {
 
 //Validate form******************************************************
 function validate() {
-  let label = document.getElementByClassName("form__star");
-  let nameInput = document.getElementById("name");
+  let label = document.getElementByClassName(".form__star");
+  let nameInput = document.getElementById(".name");
   if (nameInput.value.length > 0) {
       label.classList.add("hide");
   }
 };
+
+
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 300) {
+        $(".nav").addClass("scrolling");
+    } else {
+        $(".nav").removeClass("scrolling");
+    }
+});
 
 
 }
