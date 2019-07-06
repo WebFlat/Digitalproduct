@@ -63,25 +63,35 @@ function initMap() {
 
 
 //Validate form******************************************************
-function validate() {
-  let label = document.getElementByClassName(".form__star");
-  let nameInput = document.getElementById(".name");
-  if (nameInput.value.length > 0) {
-      label.classList.add("hide");
-  }
-};
-
+$(".form__input--name").unbind().blur(function() {
+        if ($(".form__input--name").val().length !== 0) {
+          $(".form__star--name").addClass("hide");
+        } else {
+          $(".form__star--name").removeClass("hide");
+        }s
+});
+$(".form__input--email").unbind().blur(function() {
+  if ($(".form__input--email").val().length !== 0) {
+            $(".form__star--email").addClass("hide");
+          } else {
+            $(".form__star--email").removeClass("hide");
+        }
+});
+$(".form__text").unbind().blur(function() {
+      if ($(".form__text").val().length !== 0) {
+            $(".form__star--text").addClass("hide");
+          } else {
+            $(".form__star--text").removeClass("hide");
+          }
+});          
 
 
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
-
     if (scroll >= 300) {
         $(".nav").addClass("scrolling");
     } else {
         $(".nav").removeClass("scrolling");
     }
 });
-
-
 }

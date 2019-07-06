@@ -436,7 +436,11 @@ body {
   .burger:hover .burger__line,
   .burger:active .burger__line,
   .burger:focus .burger__line {
-    background-color: #665f60; }
+    background-color: #665f60;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
   .burger__main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1081,20 +1085,20 @@ body {
     -webkit-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     transition: all .3s ease-in;
-    -webkit-transition: -webkit-transform  ease-in .2s;
-    transition: -webkit-transform  ease-in .2s;
-    -o-transition: -o-transform  ease-in .2s;
-    transition: transform  ease-in .2s;
-    transition: transform  ease-in .2s, -webkit-transform  ease-in .2s, -o-transform  ease-in .2s; }
+    -webkit-transition: -webkit-transform  linear .2s;
+    transition: -webkit-transform  linear .2s;
+    -o-transition: -o-transform  linear .2s;
+    transition: transform  linear .2s;
+    transition: transform  linear .2s, -webkit-transform  linear .2s, -o-transform  linear .2s; }
     .form__input:hover, .form__text:hover {
       background-color: rgba(235, 235, 235, 0.8); }
     .form__input:active + .form__star,
     .form__input:focus + .form__star, .form__text:active + .form__star,
     .form__text:focus + .form__star {
-      -webkit-transform: translateX(600%);
-      -ms-transform: translateX(600%);
-      -o-transform: translateX(600%);
-      transform: translateX(600%); }
+      -webkit-transform: translateX(900%);
+      -ms-transform: translateX(900%);
+      -o-transform: translateX(900%);
+      transform: translateX(900%); }
   .form__text {
     width: 100%;
     padding: 25px;

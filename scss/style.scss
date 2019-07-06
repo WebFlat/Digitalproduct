@@ -79,11 +79,14 @@ body {
     &:active .burger__main,
     &:focus .burger__main {
         display: flex;
+
     }
     &:hover .burger__line,
     &:active .burger__line,
     &:focus .burger__line  {
-       background-color: $gray-color; 
+       background-color: $gray-color;
+       transform: rotate(180deg); 
+
     }
     // &:hover .burger__line--first,
     // &:active .burger__line--first,
@@ -755,13 +758,13 @@ body {
         background-color: rgba(235,235,235, .5);
         padding: 20px 25px;
         @include tr;
-        transition: transform  ease-in .2s;
+        transition: transform  linear .2s;
         &:hover {
            background-color: rgba(235,235,235, .8); 
         }
         &:active +.form__star,
         &:focus +.form__star {
-            transform: translateX(600%);
+            transform: translateX(900%);
         }
     }    
     &__text {
