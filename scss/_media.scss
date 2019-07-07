@@ -2,6 +2,9 @@
 	.header .nav {
 		padding: 35px 5%;
 	}
+	.service__subtitle {
+        padding: 0 45px;
+    }
 }
 @media screen and (max-width: 960px) {
 	.header .nav {
@@ -24,6 +27,7 @@
 	.header .nav {
 		padding: 35px 10%;
 	}
+
 }
 @media screen and (max-width: 768px) {
 	.header .nav {
@@ -111,6 +115,9 @@
 			height: 450px;
 		}
 	}
+	.service__card-font {
+        max-height: 610px;
+    }
 }
 @media screen and (max-width: 560px) {
 	.header__title {

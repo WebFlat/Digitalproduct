@@ -24,7 +24,7 @@
         <div class="container header"> 
             <section class="nav">
                 <div href="#" class="nav__logo-wrap">
-                    <a href="" class="nav__logo-link">
+                    <a href="" class="nav__logo-link" title="Digitalproduct">
                         <svg class="icon nav__logo">
                             <use xlink:href="#Logo"></use>
                         </svg>
@@ -49,7 +49,7 @@
                     <a href="#about" class="burger__link">About</a>
                     <a href="#service" class="burger__link">Services</a>
                     <a href="#works" class="burger__link">Works</a>
-                    <a href="#location" class="burger__link">Contack</a>
+                    <a href="#location" class="burger__link">Contact</a>
                 </nav>
                 </div>
             </section>
@@ -81,33 +81,61 @@
         <section class="service" id="service">
             <div class="container container--service">
                 <div class="service__item service__item--graf">
-                    <svg class="icon icon__service">
-                        <use xlink:href="#icon-graphic"></use>
-                    </svg>
-                    <h4 class="service__title">GRAPHIC DESIGN</h4>
-                    <p class="service__subtitle">Cras mattis consectetur purus sit amet fermentum.</p>
+                    <div class="service__card service__card--graf" onclick="flip1()">
+                        <div class="service__card-face">
+                            <svg class="icon icon__service">
+                                <use xlink:href="#icon-graphic"></use>
+                            </svg>
+                            <h4 class="service__title">GRAPHIC DESIGN</h4>
+                            <p class="service__subtitle">Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                         <div class="service__card-font">
+                            <p class="service__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde suscipit quas quidem tempore neque, earum odit voluptatem porro. Sunt, in quam assumenda illum eius eos ut harum repellat suscipit cupiditate ipsa voluptatibus inventore alias esse exercitationem dolorem debitis ducimus! Sit dolores nobis aliquam voluptates fugiat, ullam illum nulla tempore voluptatibus aut ipsa eum nesciunt, blanditiis nisi animi fuga, qui dolorem.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="service__item service__item--web">
-                   <svg class="icon icon__service">
-                        <use xlink:href="#icon-web"></use>
-                    </svg>
-                    <h4 class="service__title">WEB DEVELOPMENT</h4>
-                    <p class="service__subtitle">Cras mattis consectetur purus sit amet fermentum.</p>
-                </div>
+                     <div class="service__card service__card--web" onclick="flip2()">
+                        <div class="service__card-face">
+                            <svg class="icon icon__service">
+                                <use xlink:href="#icon-web"></use>
+                            </svg>
+                            <h4 class="service__title">WEB DEVELOPMENT</h4>
+                            <p class="service__subtitle">Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                         <div class="service__card-font">
+                            <p class="service__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde suscipit quas quidem tempore neque, earum odit voluptatem porro. Sunt, in quam assumenda  voluptates fugiat, ullam illum nulla tempore voluptatibus aut ipsa eum nesciunt, blanditiis nisi animi fuga, qui dolorem.</p>
+                        </div>
+                    </div>
+                </div>    
                 <div class="service__item service__item--seo">
-                    <svg class="icon icon__service">
-                        <use xlink:href="#icon-SEO"></use>
-                    </svg>
-                    <h4 class="service__title">SEO & MARKETING</h4>
-                    <p class="service__subtitle">Cras mattis consectetur purus sit amet fermentum.</p>
+                    <div class="service__card service__card--seo" onclick="flip3()">
+                        <div class="service__card-face">
+                            <svg class="icon icon__service">
+                                 <use xlink:href="#icon-SEO"></use>
+                            </svg>
+                            <h4 class="service__title">SEO & MARKETING</h4>
+                            <p class="service__subtitle">Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                         <div class="service__card-font">
+                            <p class="service__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde suscipit quas quidem tempore neque, earum odit voluptatem porro. Sunt, in quam assumenda illum eius eos ut harum repellat suscipit cupiditate ipsa voluptatibus inventore alias esse exercitationem dolorem.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="service__item service__item--mobile">
-                   <svg class="icon icon__service">
-                        <use xlink:href="#Icon-Mobile"></use>
-                    </svg>
-                    <h4 class="service__title">MOBILE DEVELOPMENT</h4>
-                    <p class="service__subtitle">Cras mattis consectetur purus sit amet fermentum.</p>
+                    <div class="service__card service__card--mobile" onclick="flip4()">
+                        <div class="service__card-face">
+                            <svg class="icon icon__service">
+                                <use xlink:href="#Icon-Mobile"></use>
+                            </svg>
+                            <h4 class="service__title">MOBILE DEVELOPMENT</h4>
+                            <p class="service__subtitle">Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                         <div class="service__card-font">
+                            <p class="service__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde suscipit quas quidem tempore neque, earum odit voluptatem porro. Sunt, in quam assumenda illum eius eos ut harum repellat suscipit cupiditate ipsa voluptatibus inventore alias esse exercitationem dolorem debitis ducimus! Sit dolores nobis aliquam voluptates fugiat, ullam illum nulla tempore voluptatibus aut ipsa eum nesciunt, blanditiis nisi animi fuga, qui dolorem.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="service__item service__item--service" style="background: linear-gradient(rgba(159, 154, 207, .6),rgba(159, 154, 207, .6)), url(./img/service-bg.jpg) no-repeat center;background-size: cover;">
                     <svg class="icon icon__service">
@@ -357,7 +385,7 @@
                     <use xlink:href="#phone"></use>
                 </svg>
             </div>
-            <p class="location__text">Tel: +3845599933993</p>
+            <p class="location__text">Tel: +6281235966914</p>
         </div>
         </section> 
     </main>
@@ -382,13 +410,12 @@
                 </a>
              </div>
         </div>
-
     </footer>
 
 
 
     <!-- Sprite -->
-<svg width="0" height="0" class="hidden">
+<svg width="0" height="0" class="hide">
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 38" id="arrow-left">
     <defs>
       <filter id="a" x="1410" y="4175" width="22" height="38" filterUnits="userSpaceOnUse">
