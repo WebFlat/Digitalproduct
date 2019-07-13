@@ -1143,10 +1143,10 @@ body {
     .form__input:active + .form__star,
     .form__input:focus + .form__star, .form__text:active + .form__star,
     .form__text:focus + .form__star {
-      -webkit-transform: translateX(900%);
-      -ms-transform: translateX(900%);
-      -o-transform: translateX(900%);
-      transform: translateX(900%); }
+      -webkit-transform: translateX(1000%);
+      -ms-transform: translateX(1000%);
+      -o-transform: translateX(1000%);
+      transform: translateX(1000%); }
   .form__text {
     width: 100%;
     padding: 25px;
