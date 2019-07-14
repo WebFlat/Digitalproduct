@@ -339,7 +339,14 @@ body {
     width: 100%;
     height: 100vh;
 }
-
+@keyframes logoAnimate {
+    from {
+       transform: rotate(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
 .header {
     display: flex;
     justify-content: center;
@@ -362,11 +369,17 @@ body {
         &__logo {
             width: 90px;
             height: 90px;
+            fill: #f6f6f6;
             @include tr();
             &:hover,
             &:focus {
-                transform: scale(1.2);
+                 fill: $gray-color;
             }
+            animation-name: logoAnimate;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 3s;
         }
         &__links {
             width: 50%;
@@ -609,6 +622,7 @@ body {
         width: 100%;
         background-color: #fff;
         position: relative;
+        text-align: center;
     }
     &__wrap-avatar {
         width: 260px;
@@ -618,7 +632,7 @@ body {
         overflow: hidden;
         position: absolute;
         top: -40%;
-    }
+    } 
     &__skills {
         font-family: 'PT Sans', sans-serif;
         margin: 35px 50px;
@@ -631,6 +645,9 @@ body {
         margin: 0;
         color: #9f9acf;
         font-size: 2.4rem;
+        padding: 0 5px;
+        max-height: 65px;
+        overflow: hidden;
     }
     &__wrap-social {
         padding: 20px 15%;
@@ -682,6 +699,17 @@ body {
 
 
 //Map**************************************************
+@keyframes topDrag {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 .location {
     background-color: $bg-color;
     position: relative;
@@ -694,6 +722,10 @@ body {
         left: 85%;
         bottom: 9%;
         @include tr;
+        animation-name: topDrag;
+        animation-delay: 3s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
         &:hover,
         &:active {
             background-color: rgba(159,154,207, .9);
@@ -710,10 +742,10 @@ body {
         transition: transform ease-in .5s;
         cursor: pointer;
         &:hover,
-        &:active,
         &:focus {
             transform: translateX(-245px);
         }
+       
     }
     &__address {
         top: 15%;
@@ -747,7 +779,13 @@ body {
         width: 70%;
         line-height: 1;
         align-self: center;
-        background-color: rgba(217,216,227, .7)
+        background-color: rgba(217,216,227, .7);
+        text-decoration: none;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $bg-color;
+        }
     }
 }
 .map {
@@ -836,6 +874,7 @@ body {
         }
     }
 }
+
 
 
 

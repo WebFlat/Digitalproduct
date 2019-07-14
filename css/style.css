@@ -693,6 +693,30 @@ body {
   width: 100%;
   height: 100vh; }
 
+@-webkit-keyframes logoAnimate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+
+@-o-keyframes logoAnimate {
+  from {
+    -o-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    transform: rotateY(360deg); } }
+
+@keyframes logoAnimate {
+  from {
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -728,14 +752,27 @@ body {
     .header .nav__logo {
       width: 90px;
       height: 90px;
+      fill: #f6f6f6;
       -webkit-transition: all .3s ease-in;
       -o-transition: all .3s ease-in;
-      transition: all .3s ease-in; }
+      transition: all .3s ease-in;
+      -webkit-animation-name: logoAnimate;
+      -o-animation-name: logoAnimate;
+      animation-name: logoAnimate;
+      -webkit-animation-duration: 3s;
+      -o-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-timing-function: linear;
+      -o-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-delay: 3s;
+      -o-animation-delay: 3s;
+      animation-delay: 3s; }
       .header .nav__logo:hover, .header .nav__logo:focus {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2); }
+        fill: #665f60; }
     .header .nav__links {
       width: 50%;
       display: -webkit-box;
@@ -956,7 +993,8 @@ body {
     align-items: center;
     width: 100%;
     background-color: #fff;
-    position: relative; }
+    position: relative;
+    text-align: center; }
   .team__wrap-avatar {
     width: 260px;
     height: 260px;
@@ -975,7 +1013,10 @@ body {
     text-transform: uppercase;
     margin: 0;
     color: #9f9acf;
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    padding: 0 5px;
+    max-height: 65px;
+    overflow: hidden; }
   .team__wrap-social {
     padding: 20px 15%;
     width: 100%;
@@ -1022,6 +1063,42 @@ body {
       -o-transition: all .3s ease-in;
       transition: all .3s ease-in; }
 
+@-webkit-keyframes topDrag {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@-o-keyframes topDrag {
+  0% {
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  50% {
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  100% {
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes topDrag {
+  0% {
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
+
 .location {
   background-color: #9f9acf;
   position: relative;
@@ -1035,7 +1112,19 @@ body {
     bottom: 9%;
     -webkit-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
-    transition: all .3s ease-in; }
+    transition: all .3s ease-in;
+    -webkit-animation-name: topDrag;
+    -o-animation-name: topDrag;
+    animation-name: topDrag;
+    -webkit-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
     .location__btn:hover, .location__btn:active {
       background-color: rgba(159, 154, 207, 0.9); }
   .location__address, .location__tel {
@@ -1055,7 +1144,7 @@ body {
     transition: transform ease-in .5s;
     transition: transform ease-in .5s, -webkit-transform ease-in .5s, -o-transform ease-in .5s;
     cursor: pointer; }
-    .location__address:hover, .location__address:active, .location__address:focus, .location__tel:hover, .location__tel:active, .location__tel:focus {
+    .location__address:hover, .location__address:focus, .location__tel:hover, .location__tel:focus {
       -webkit-transform: translateX(-245px);
       -ms-transform: translateX(-245px);
       -o-transform: translateX(-245px);
@@ -1091,7 +1180,10 @@ body {
     line-height: 1;
     -ms-flex-item-align: center;
     align-self: center;
-    background-color: rgba(217, 216, 227, 0.7); }
+    background-color: rgba(217, 216, 227, 0.7);
+    text-decoration: none; }
+    .location__text:hover, .location__text:active, .location__text:focus {
+      color: #9f9acf; }
 
 .map {
   height: 900px;

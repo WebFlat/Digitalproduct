@@ -14,6 +14,7 @@ $(document).ready(function() {
       nextArrow: '<a href="#" class="arrow arrow--right"></a>',
       prevArrow: '<a href="#" class="arrow arrow--left"></a>', 
       slidesToShow: 3,
+      adaptiveHeight: true,
       autoplay: true,
       swipeToSlide: true,
       infinite: true,
